@@ -17,6 +17,11 @@ export default function (plop) {
       },
       {
         type: 'add',
+        path: 'src/components/{{camelCase name}}/{{dashCase name}}.html',
+        templateFile: 'plop-templates/component/component.html',
+      },
+      {
+        type: 'add',
         path: 'src/components/{{camelCase name}}/{{camelCase name}}.js',
         templateFile: 'plop-templates/component/Component.js',
       },

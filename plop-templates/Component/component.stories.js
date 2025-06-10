@@ -1,14 +1,22 @@
-import { {{camelCase name}} as render{{pascalCase name}} }  from './{{camelCase name}}';
+import html from './{{dashCase name}}.html?raw';
+import './{{dashCase name}}.scss';
 
 export default {
   title: 'components/{{pascalCase name}}',
   tags: ['autodocs'],
-  render: ({ ...args }) => {
-    return render{{pascalCase name}}({ ...args });
+  parameters: {
+    layout: 'centered',
   },
-  argTypes: {},
+  render: () => {
+    const container = document.createElement('section');
+    container.innerHTML = html;
+    import('./{{camelCase name}}.js').then((module) => {
+      if (typeof module.default === 'function') {
+        module.default(container.firstChild);
+      }
+    });
+    return container;
+  },
 };
 
-export const {{camelCase name}} = {
-  args: {},
-};
+export const {{camelCase name}} = {};

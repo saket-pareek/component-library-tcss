@@ -1,14 +1,22 @@
-import { infiniteCarousel as renderInfiniteCarousel } from './infiniteCarousel';
+import html from './infinite-carousel.html?raw';
+import './infinite-carousel.scss';
 
 export default {
   title: 'components/InfiniteCarousel',
   tags: ['autodocs'],
-  render: ({ ...args }) => {
-    return renderInfiniteCarousel({ ...args });
+  parameters: {
+    layout: 'centered',
   },
-  argTypes: {},
+  render: () => {
+    const container = document.createElement('section');
+    container.innerHTML = html;
+    import('./infiniteCarousel.js').then((module) => {
+      if (typeof module.default === 'function') {
+        module.default(container.firstChild);
+      }
+    });
+    return container;
+  },
 };
 
-export const infiniteCarousel = {
-  args: {},
-};
+export const infiniteCarousel = {};

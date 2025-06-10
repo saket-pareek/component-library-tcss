@@ -1,37 +1,7 @@
-import './infinite-carousel.scss';
+import { logosArr } from './data';
 
-export const infiniteCarousel = () => {
-  const logosArr = [
-    {
-      name: 'logo--woolworths',
-      url: 'https://www.woolworths.com.au/',
-    },
-    {
-      name: 'logo--lg',
-      url: 'https://www.lg.com/',
-    },
-    {
-      name: 'logo--audi',
-      url: 'https://www.audichina.cn/',
-    },
-    {
-      name: 'logo--datev',
-      url: 'https://www.datev.com/',
-    },
-    {
-      name: 'logo--indigo',
-      url: 'https://www.goindigo.in/',
-    },
-    {
-      name: 'logo--hm',
-      url: 'https://www2.hm.com/',
-    },
-  ];
-
-  const wrapper = document.createElement('div');
-  wrapper.classList.add('infinite-carousel');
-  const carousel = document.createElement('ul');
-  carousel.classList.add('infinite-carousel__list');
+export default function infiniteCarousel(el) {
+  const carousel = el.querySelector('.infinite-carousel__list');
   const items = logosArr
     .map(
       ({ name, url }) =>
@@ -43,6 +13,5 @@ export const infiniteCarousel = () => {
     )
     .join('');
   carousel.innerHTML = items + items + items;
-  wrapper.appendChild(carousel);
-  return wrapper;
-};
+  el.appendChild(carousel);
+}

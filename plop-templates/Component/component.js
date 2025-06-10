@@ -1,3 +1,1 @@
-import './{{dashCase name}}.scss';
-
-export const {{camelCase name}} = () => `<div></div>`;
+export default function {{camelCase name}} (el) {};
