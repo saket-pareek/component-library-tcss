@@ -1,14 +1,14 @@
-import { {{camelCase name}} }  from './{{camelCase name}}';
+import { {{camelCase name}} as render{{pascalCase name}} }  from './{{camelCase name}}';
 
 export default {
   title: 'components/{{pascalCase name}}',
   tags: ['autodocs'],
   render: ({ ...args }) => {
-    return {{camelCase name}}({ ...args });
+    return render{{pascalCase name}}({ ...args });
   },
   argTypes: {},
 };
 
-export const def = {
+export const {{camelCase name}} = {
   args: {},
 };

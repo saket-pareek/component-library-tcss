@@ -1,0 +1,86 @@
+.infinite-carousel {
+  overflow: hidden;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+
+  &__list {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 40px;
+    animation: scroll-left 20s linear infinite;
+    animation-play-state: running;
+    will-change: transform;
+    transition: all 3s ease-out;
+
+    &-item {
+      flex: 0 0 auto;
+      list-style: none;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        &--woolworths {
+          width: 170px;
+          height: 50px;
+        }
+        &--lg {
+          width: 110px;
+          height: 45px;
+        }
+        &--indigo {
+          width: 110px;
+          height: 50px;
+        }
+        &--audi {
+          width: 69px;
+          height: 24px;
+          transform: scale(1.3);
+        }
+        &--hm {
+          width: 60px;
+          height: 50px;
+        }
+        &--datev {
+          width: 80px;
+          height: 70px;
+        }
+        &--olam {
+        }
+        &--kyocera {
+        }
+        &--maruti {
+        }
+      }
+
+      svg {
+        // filter: grayscale(100%);
+
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .infinite-carousel__list {
+      animation-play-state: paused;
+      transition: transform 0.6s ease-out;
+    }
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-66.66%);
+    }
+  }
+}
