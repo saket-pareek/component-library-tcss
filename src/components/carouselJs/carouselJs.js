@@ -18,12 +18,10 @@ export default function carouselJS(el) {
     navContainerEl.insertAdjacentHTML('beforeend', markup);
   };
 
-  const showActiveSlide = slide => {
+  const showActiveDot = n => {
     const navDots = el.querySelectorAll('.carousel-js__nav-dot');
     navDots.forEach(item => item.classList.remove('active'));
-    const activeNavDot = el.querySelector(
-      `.carousel-js__nav-dot[data-slide='${slide}']`,
-    );
+    const activeNavDot = el.querySelector(`[data-slide='${n}']`);
     activeNavDot.classList.add('active');
   };
 
@@ -66,7 +64,7 @@ export default function carouselJS(el) {
       currSlide--;
     }
     goToSlide(currSlide);
-    showActiveSlide(currSlide);
+    showActiveDot(currSlide);
   };
 
   const showNextSlide = () => {
@@ -76,13 +74,13 @@ export default function carouselJS(el) {
       currSlide++;
     }
     goToSlide(currSlide);
-    showActiveSlide(currSlide);
+    showActiveDot(currSlide);
   };
 
   const init = () => {
     goToSlide(currSlide);
     generateDots();
-    showActiveSlide(currSlide);
+    showActiveDot(currSlide);
   };
 
   const handleArrowKeys = e => {
@@ -95,7 +93,7 @@ export default function carouselJS(el) {
     if (!target) return;
     currSlide = +target.dataset.slide;
     goToSlide(currSlide);
-    showActiveSlide(currSlide);
+    showActiveDot(currSlide);
   };
 
   init();
