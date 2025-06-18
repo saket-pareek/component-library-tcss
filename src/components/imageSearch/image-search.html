@@ -1,0 +1,29 @@
+<div class="image-search h-screen flex flex-col items-center">
+  <div
+    class="container p-[15px] min-[480px]:p-0 w-full flex flex-col items-center"
+  >
+    <h1 class="text-[40px] mt-[70px] text-center">Image Search App</h1>
+    <div
+      class="image-search__input-container min-[480px]:max-w-[400px] w-full mt-[30px] flex h-[80px] min-[480px]:h-[40px] flex-col gap-y-[10px] min-[480px]:flex-row min-[480px]:gap-y-0 items-center"
+    >
+      <input
+        type="text"
+        placeholder="Search for images"
+        class="image-search__input w-full h-full text-[20px] px-[10px]"
+      />
+      <button
+        class="image-search__search-btn bg-green-400 h-full px-[20px] cursor-pointer"
+      >
+        Search
+      </button>
+    </div>
+    <div
+      class="image-search__search-results gap-[40px] justify-center gap-y-[50px] px-[20px] flex max-w-[1200px] flex-wrap mt-[50px] w-full"
+    ></div>
+    <button
+      class="image-search__show-btn my-[80px] hidden bg-blue-200 px-[15px] py-[10px] text-[18px] font-bold border-0 cursor-pointer"
+    >
+      Show more
+    </button>
+  </div>
+</div>
