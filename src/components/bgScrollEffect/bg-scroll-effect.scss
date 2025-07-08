@@ -1,0 +1,11 @@
+.bg-scroll-effect {
+  &__img {
+    background-image: url('https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=626&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 160%;
+  }
+  h1 {
+    font-size: 50px;
+  }
+}
