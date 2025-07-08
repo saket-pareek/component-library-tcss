@@ -1,4 +1,4 @@
-const createElement = (markup) => {
+const createElement = markup => {
   try {
     const wrapper = document.createElement('div');
     wrapper.innerHTML = markup;
@@ -8,4 +8,6 @@ const createElement = (markup) => {
   }
 };
 
-export { createElement };
+const calculatePercentValue = (total, percent) => (percent / 100) * total;
+
+export { createElement, calculatePercentValue };
