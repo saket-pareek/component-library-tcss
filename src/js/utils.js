@@ -21,4 +21,22 @@ const fetchData = async endpoint => {
 
 const calculatePercentValue = (total, percent) => (percent / 100) * total;
 
-export { createElement, calculatePercentValue, fetchData };
+const convertCelciusToFahrenheit = celcius => (+celcius * 9) / 5 + 32;
+const convertCelciusToKelvin = celcius => +celcius + 273.15;
+const convertFahrenheitToCelcius = fahrenheit => (+fahrenheit - 32) * (5 / 9);
+const convertFahrenheitToKelvin = fahrenheit =>
+  ((+fahrenheit - 32) * 5) / 9 + 273.15;
+const convertKelvinToCalcius = kelvin => +kelvin - 273.15;
+const convertKelvinToFahrenheit = kelvin => ((+kelvin - 32) * 5) / 9 + 273.15;
+
+export {
+  createElement,
+  calculatePercentValue,
+  fetchData,
+  convertCelciusToFahrenheit,
+  convertCelciusToKelvin,
+  convertFahrenheitToCelcius,
+  convertFahrenheitToKelvin,
+  convertKelvinToCalcius,
+  convertKelvinToFahrenheit,
+};
