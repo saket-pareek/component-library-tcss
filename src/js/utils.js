@@ -21,6 +21,9 @@ const fetchData = async endpoint => {
 
 const calculatePercentValue = (total, percent) => (percent / 100) * total;
 
+const getRandomNumber = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
 const convertCelciusToFahrenheit = celcius => (+celcius * 9) / 5 + 32;
 const convertCelciusToKelvin = celcius => +celcius + 273.15;
 const convertFahrenheitToCelcius = fahrenheit => (+fahrenheit - 32) * (5 / 9);
@@ -31,8 +34,9 @@ const convertKelvinToFahrenheit = kelvin => ((+kelvin - 32) * 5) / 9 + 273.15;
 
 export {
   createElement,
-  calculatePercentValue,
   fetchData,
+  calculatePercentValue,
+  getRandomNumber,
   convertCelciusToFahrenheit,
   convertCelciusToKelvin,
   convertFahrenheitToCelcius,

@@ -1,0 +1,14 @@
+.dice-roll {
+  @keyframes roll {
+    from {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+      transform: rotate(720deg) rotateY(720deg);
+    }
+  }
+
+  &__animate {
+    animation: roll 1s infinite;
+  }
+}
