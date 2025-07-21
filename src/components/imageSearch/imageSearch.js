@@ -1,4 +1,5 @@
 import { API_URL, API_KEY } from './data';
+import { fetchData } from '../../js/utils';
 
 export default function imageSearch(el) {
   const inputEl = el.querySelector('.image-search__input');
@@ -7,19 +8,13 @@ export default function imageSearch(el) {
   const showBtnEl = el.querySelector('.image-search__show-btn');
   let imagesArr = [];
 
-  const fetchData = async (url) => {
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-  };
-
-  const renderShowBtn = (data) => {
+  const renderShowBtn = data => {
     if (data.total_pages > 0) showBtnEl.classList.add('show');
   };
 
   const retrievePageNum = () => imagesArr.length / 10 + 1;
 
-  const handleSearch = async (e) => {
+  const handleSearch = async e => {
     const inputValue = inputEl.value;
     if (!inputValue) {
       searchResultsEl.innerHTML = '';
@@ -30,9 +25,9 @@ export default function imageSearch(el) {
       ? 1
       : retrievePageNum();
     const data = await fetchData(
-      `${API_URL}/?page=${pageNum}&query=${inputValue}&client_id=${API_KEY}`
+      `${API_URL}/?page=${pageNum}&query=${inputValue}&client_id=${API_KEY}`,
     );
-    const relevantData = data?.results?.map((el) => ({
+    const relevantData = data?.results?.map(el => ({
       img: el?.urls?.regular,
       desc: el?.alt_description,
     }));
@@ -46,7 +41,7 @@ export default function imageSearch(el) {
 
   const renderImages = () => {
     const markupArr = imagesArr?.map(
-      (el) => `<div
+      el => `<div
             class="image-search__result-container group relative cursor-pointer overflow-hidden w-full min-[480px]:w-[45%] min-[768px]:w-[30%] rounded-[10px] border border-black"
           >
             <img
@@ -59,12 +54,12 @@ export default function imageSearch(el) {
             >
               ${el?.desc}
             </div>
-          </div>`
+          </div>`,
     );
     searchResultsEl.innerHTML = markupArr.join('');
   };
 
-  const handleEnterPress = (e) => {
+  const handleEnterPress = e => {
     if (e.keyCode !== 13) return;
     searchEl.click();
   };

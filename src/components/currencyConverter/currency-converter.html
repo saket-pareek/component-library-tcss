@@ -1,0 +1,25 @@
+<div
+  class="currency-converter flex h-screen items-center justify-center bg-yellow-300">
+  <div
+    class="flex w-[40%] flex-col items-center gap-[45px] bg-teal-600 p-[20px] text-[24px] text-white">
+    <h3 class="text-align font-serif tracking-[1.5px]">Currency Converter</h3>
+    <div class="flex w-full justify-between">
+      <select
+        name=""
+        id=""
+        class="currency-converter__base-curr p-[10px]"></select>
+      <input
+        type="number"
+        class="currency-converter__base-amount border-0 bg-teal-600 text-right text-[24px] text-white focus:outline-0"
+        min="0" />
+    </div>
+    <div class="flex w-full justify-between">
+      <select
+        name=""
+        id=""
+        class="currency-converter__target-curr p-[10px]"></select>
+      <span class="currency-converter__target-amount"></span>
+    </div>
+    <h6 class="currency-converter__converted-amount"></h6>
+  </div>
+</div>
