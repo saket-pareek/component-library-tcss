@@ -1,0 +1,19 @@
+<div
+  class="age-calculator flex w-[50vw] flex-col items-center p-[40px] shadow-2xl">
+  <h2 class="text-[36px]">Age Calculator</h2>
+  <form
+    class="form-field mt-[25px] flex w-[50%] flex-col items-center gap-y-[12px]">
+    <label for="birth"><h4>Enter your date of birth</h4></label>
+    <input
+      class="age-calculator__date-input block w-full p-[5px]"
+      type="date"
+      name="birth" />
+    <button
+      class="age-calculator__calculate-btn max-w-[50%] cursor-pointer rounded-[5px] border-0 bg-blue-500 px-[15px] py-[10px] text-white duration-[0.3s] hover:bg-blue-600">
+      Calculate Age
+    </button>
+  </form>
+  <h2 class="mt-[25px]">
+    Your age is <span class="age-calculator__age">21</span> years old
+  </h2>
+</div>
