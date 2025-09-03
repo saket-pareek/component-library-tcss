@@ -27,6 +27,3 @@ export default function recipeBook(el) {
     );
     recipeList.innerHTML = markupArr.join('');
   }
-
-  renderRecipes(API_URL);
-}
