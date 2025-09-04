@@ -1,37 +1,20 @@
-<div class="rock-paper-scissors text-center">
-  <h2 class="rock-paper-scissors__heading text-[32px]">
-    Rock Paper Scissors Game
-  </h2>
-  <h3 class="rock-paper-scissors__sub-heading mt-[25px] text-[25px]">
-    Choose your move:
-  </h3>
-  <div
-    class="rock-paper-scissors__btns-container mt-[15px] flex justify-center gap-[20px]">
-    <button
-      data-name="rock"
-      class="rock-paper-scissors__btn cursor-pointer rounded-[5px] border-0 bg-[#ff0000] p-[10px] text-[45px] transition-opacity hover:opacity-70">
-      👊
-    </button>
-    <button
-      data-name="paper"
-      class="rock-paper-scissors__btn cursor-pointer rounded-[5px] border-0 bg-[#2196f3] p-[10px] text-[45px] transition-opacity hover:opacity-70">
-      🖐
-    </button>
-    <button
-      data-name="scissors"
-      class="rock-paper-scissors__btn cursor-pointer rounded-[5px] border-0 bg-[#4caf50] p-[10px] text-[45px] transition-opacity hover:opacity-70">
-      ✌
-    </button>
+<div class="rock-paper-scissors">
+  <h2 class="rock-paper-scissors__heading">Rock Paper Scissors Game</h2>
+  <h3 class="rock-paper-scissors__sub-heading">Choose your move:</h3>
+  <div class="rock-paper-scissors__btns-container">
+    <button data-name="rock" class="rock-paper-scissors__btn">👊</button>
+    <button data-name="paper" class="rock-paper-scissors__btn">🖐</button>
+    <button data-name="scissors" class="rock-paper-scissors__btn">✌</button>
   </div>
-  <p class="rock-paper-scissors__message mt-[20px] text-[25px]"></p>
-  <h4 class="rock-paper-scissors__score mt-[20px] text-[25px]">
-    <span
-      >Your score:
-      <span class="rock-paper-scissors__user-wins text-[#2196f3]"></span
-    ></span>
-    <span
-      >Computer score:
-      <span class="rock-paper-scissors__computer-wins text-[#ff0000]"></span
-    ></span>
+  <p class="rock-paper-scissors__message"></p>
+  <h4 class="rock-paper-scissors__score">
+    <span>
+      Your score:
+      <span class="rock-paper-scissors__user-wins"></span>
+    </span>
+    <span>
+      Computer score:
+      <span class="rock-paper-scissors__computer-wins"></span>
+    </span>
   </h4>
 </div>

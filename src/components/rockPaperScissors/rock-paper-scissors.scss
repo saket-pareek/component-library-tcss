@@ -1,3 +1,62 @@
 .rock-paper-scissors {
+  text-align: center;
 
+  &__heading {
+    font-size: 32px;
+  }
+
+  &__sub-heading {
+    margin-top: 25px;
+    font-size: 25px;
+  }
+
+  &__btns-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__btn {
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 45px;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &[data-name='rock'] {
+      background-color: #ff0000;
+    }
+
+    &[data-name='paper'] {
+      background-color: #2196f3;
+    }
+
+    &[data-name='scissors'] {
+      background-color: #4caf50;
+    }
+  }
+
+  &__message {
+    margin-top: 20px;
+    font-size: 25px;
+  }
+
+  &__score {
+    margin-top: 20px;
+    font-size: 25px;
+
+    .rock-paper-scissors__user-wins {
+      color: #2196f3;
+    }
+
+    .rock-paper-scissors__computer-wins {
+      color: #ff0000;
+    }
+  }
 }

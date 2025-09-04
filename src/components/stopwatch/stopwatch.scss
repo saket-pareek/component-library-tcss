@@ -1,0 +1,48 @@
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+
+  &__timer {
+    font-size: 100px;
+    font-weight: bold;
+    color: #f44583;
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+  }
+
+  &__btn-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  &__btn {
+    cursor: pointer;
+    border: 0;
+    border-radius: 25px;
+    background-color: #f44583;
+    padding: 25px 60px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    transition: box-shadow 0.2s ease;
+    font-family: monospace;
+
+    &:hover {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: auto;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
