@@ -1,0 +1,82 @@
+body:has(.video-trailer-popup) {
+  background-color: black;
+}
+
+.video-trailer-popup {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 600px;
+    padding: 50px;
+  }
+
+  &__thumbnail {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+  }
+
+  &__title {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &__cta {
+    max-width: max-content;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+    font-size: 17px;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #f59e0b; // amber-500
+    }
+  }
+
+  &__player {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    cursor: pointer;
+    appearance: none;
+    border: none;
+    background: transparent;
+    font-size: 60px;
+    color: #fff;
+  }
+
+  &__video {
+    width: 75%;
+    display: block;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+}
